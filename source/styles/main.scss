@@ -1,0 +1,54 @@
+@use 'reset';
+@use 'variaveis';
+
+@mixin buttonForm() {
+    border: none;
+    font-weight: bold;
+    padding: 8px;
+    font-size: 25px;
+    color: variaveis.$corFontePrincipal;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+header {
+    background-color: variaveis.$corSecundaria;
+
+    h1 {
+        color: variaveis.$corFontePrincipal;
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+        padding: 16px;
+    }
+}
+
+body {
+    background-color: variaveis.$corPrincipal;
+    justify-content: center;
+    text-align: center;
+}
+
+section {
+    margin-top: 16px;
+}
+
+#botao-abrir-1,
+#botao-abrir-2,
+#botao-abrir-3,
+#botao-abrir-4,
+#botao-abrir-5,
+#botao-abrir-6 {
+    @include buttonForm();
+    background-color: variaveis.$corBotaoAbrir;
+}
+
+#botao-fechar-1,
+#botao-fechar-2,
+#botao-fechar-3,
+#botao-fechar-4,
+#botao-fechar-5,
+#botao-fechar-6 {
+    @include buttonForm();
+    background-color: variaveis.$corBotaoFechar;
+}

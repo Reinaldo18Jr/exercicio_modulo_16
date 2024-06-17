@@ -32,6 +32,10 @@ body {
 section {
     margin-top: 16px;
     display: none;
+
+    img {
+        max-width: 50%;
+    }
 }
 
 #botao-abrir-1,
@@ -52,4 +56,30 @@ section {
 #botao-fechar-6 {
     @include buttonForm();
     background-color: variaveis.$corBotaoFechar;
+}
+
+.overlay-image-link {
+    padding: 16px;
+    background-color: variaveis.$corOverlayImage;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    opacity: 0;
+    transition: all ease .5s;
+
+    a {
+        color: variaveis.$corFontePrincipal;
+        text-decoration: none;
+    }
+}
+
+ul li {
+    list-style: none;
+    position: relative;
+    overflow-y: hidden;
+
+    &:hover .overlay-image-link {
+        opacity: 1;
+    }
 }
